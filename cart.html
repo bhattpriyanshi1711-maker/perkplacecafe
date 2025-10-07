@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Bliss | Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/common.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/cart.js"></script>
+</head>
+<body>
+  <header></header> 
+
+  <main class="cart-container">
+    <h1>Your Cart</h1>
+    <table id="cartTable" class="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price per Item</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+
+    <h2 id="cart-total">Total: ₹0</h2>
+
+    <div class="cart-actions">
+      <button id="clear-cart" class="clear-cart">Clear Cart</button>
+      <button id="proceed" class="proceed">Proceed</button>
+    </div>
+  </main>
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Confirm Your Order</h2>
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="custName">Name</label>
+          <input type="text" id="custName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+  <label for="custEmail">Email</label>
+  <input type="email" id="custEmail" placeholder="Enter your email" required>
+</div>
+
+        <div class="form-group">
+          <label for="custContact">Contact Number</label>
+          <input type="tel" id="custContact" placeholder="10-digit number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label for="custAddress">Address</label>
+          <textarea id="custAddress" placeholder="Enter your address" maxlength="100" required></textarea>
+        </div>
+        <p>Payment Method: <strong>Cash on Delivery (COD)</strong></p>
+        <button type="submit" class="btn">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+
+  <footer></footer>
+</body>
+</html>

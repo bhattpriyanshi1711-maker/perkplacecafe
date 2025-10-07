@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs - Café Bliss</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>  
+</head>
+<body>
+
+  <header>
+
+  </header>
+
+  <main class="container">
+    <section class="faq">
+      <h1>Frequently Asked Questions</h1>
+      <p class="faq-intro">Find quick answers to common questions about Café Bliss.</p>
+
+      <div class="faq-item">
+        <button class="faq-question">What are your café hours?</button>
+        <div class="faq-answer">
+          <p>We’re open from <strong>8:00 AM to 10:00 PM</strong>, seven days a week.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer vegan or gluten-free options?</button>
+        <div class="faq-answer">
+          <p>Yes! We serve a variety of <strong>vegan coffees, dairy-free alternatives</strong>, and <strong>gluten-free pastries</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I order online?</button>
+        <div class="faq-answer">
+          <p>Absolutely. Use our online menu to <strong>place your order</strong> and pick it up in-store or have it delivered.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you host events or private bookings?</button>
+        <div class="faq-answer">
+          <p>Yes, we host small events and private bookings. <a href="contact.html">Contact us</a> for details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/common.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const questions = document.querySelectorAll(".faq-question");
+      questions.forEach(q => {
+        q.addEventListener("click", () => {
+          q.classList.toggle("active");
+          const answer = q.nextElementSibling;
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

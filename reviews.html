@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Café Bliss</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header></header>
+
+  <main class="container">
+    <section class="reviews-page">
+      <h1>Customer Reviews</h1>
+      <p class="intro-text">We’d love to hear your thoughts! Leave a review below.</p>
+
+      <div class="review-form">
+        <h2>Leave a Review</h2>
+        <form id="addReviewForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <textarea name="comment" rows="4" placeholder="Write your review..." required></textarea>
+          <button type="submit" class="btn">Submit Review</button>
+        </form>
+      </div>
+
+      <div class="review-list">
+        <div class="review-card">
+          <h3>Priya S.</h3>
+          <p>The coffee is amazing and the pastries are heavenly. Cozy ambiance!</p>
+        </div>
+        <div class="review-card">
+          <h3>Rahul K.</h3>
+          <p>Great place to relax and enjoy some fresh cookies. Friendly staff too.</p>
+        </div>
+        <div class="review-card">
+          <h3>Ananya M.</h3>
+          <p>Loved the cappuccino! Will definitely come back for the pastries.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    document.getElementById("addReviewForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name = this.name.value;
+      const comment = this.comment.value;
+
+      alert(`Thank you ${name}! Your review has been submitted.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
